@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MetroPulse | Jay Menon</title>
+
+  <meta
+    name="description"
+    content="MetroPulse — a serverless incremental lakehouse reference architecture exploring governed analytics, stateful data engineering, conversational AI, and production architecture decisions."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+
+<body>
+
+  <!-- =========================================================
+       SITE HEADER
+       ========================================================= -->
+
+  <header class="site-header">
+    <div class="container site-nav">
+
+      <a class="identity" href="../../index.html">
+        <span class="identity-mark">JM</span>
+
+        <span class="identity-text">
+          <strong>Jay Menon</strong>
+          <small>Architecture &amp; Engineering</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../../index.html#projects">Projects</a>
+        <a href="../../index.html#about">About</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- =========================================================
+         PROJECT HERO
+         ========================================================= -->
+
+    <section class="project-hero">
+      <div class="container">
+
+        <a class="eyebrow project-back" href="../../index.html#projects">
+          ← Projects
+        </a>
+
+        <div class="project-hero-grid">
+
+          <div>
+            <p class="eyebrow">DATA ARCHITECTURE · ANALYTICS · AI</p>
+
+            <h1>
+              MetroPulse
+            </h1>
+
+            <p class="project-subtitle">
+              A Serverless Incremental Lakehouse Reference Architecture
+            </p>
+
+            <p class="project-lead">
+              An end-to-end reference implementation built to explore a
+              deceptively difficult architecture question:
+              how do we turn operational business events into trusted,
+              governed analytical information — and then make that
+              information accessible through both deterministic software
+              and natural-language exploration?
+            </p>
+          </div>
+
+
+          <aside class="project-summary-card">
+
+            <div class="summary-item">
+              <span>Architecture</span>
+              <strong>Lakehouse / Medallion</strong>
+            </div>
+
+            <div class="summary-item">
+              <span>Platform</span>
+              <strong>Databricks + AWS</strong>
+            </div>
+
+            <div class="summary-item">
+              <span>Source</span>
+              <strong>PostgreSQL business events</strong>
+            </div>
+
+            <div class="summary-item">
+              <span>Consumption</span>
+              <strong>Dashboard · App · Conversational AI</strong>
+            </div>
+
+            <div class="summary-item">
+              <span>Primary concern</span>
+              <strong>Architecture decisions, not product features</strong>
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         PROJECT THESIS
+         ========================================================= -->
+
+    <section class="project-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">THE PROJECT</p>
+          <h2>The system is the experiment.</h2>
+        </div>
+
+        <div class="prose-grid">
+
+          <p class="section-intro">
+            MetroPulse models a ride-share operation, but the transportation
+            domain is intentionally secondary. The project exists to examine
+            architectural responsibilities that recur across transactional,
+            financial, claims, tax, IoT, and other event-oriented systems.
+          </p>
+
+          <p>
+            Rather than beginning with Databricks features and looking for
+            places to use them, the implementation begins with system
+            responsibilities: protect the operational workload, preserve
+            source evidence, reconstruct trustworthy analytical state,
+            expose stable business models, govern access, and support
+            different forms of consumption.
+          </p>
+
+        </div>
+
+        <div class="principle-callout">
+          <span class="callout-label">Architecture principle</span>
+          <p>
+            Design the logical architecture around durable responsibilities
+            and change. Design the physical architecture around requirements
+            that actually exist.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         BUSINESS PROBLEM
+         ========================================================= -->
+
+    <section class="project-section section-muted">
+      <div class="container">
+
+        <div class="section-number">01</div>
+
+        <div class="section-heading">
+          <p class="eyebrow">THE PROBLEM</p>
+
+          <h2>
+            Operational data is not automatically an analytical system.
+          </h2>
+        </div>
+
+
+        <div class="problem-grid">
+
+          <article class="architecture-card">
+            <span class="card-index">01</span>
+
+            <h3>Protect operations</h3>
+
+            <p>
+              PostgreSQL represents the operational system of record.
+              Analytical scans, historical reconstruction, aggregation,
+              dashboards, and AI workloads should not compete with the
+              workload responsible for running the business.
+            </p>
+          </article>
+
+
+          <article class="architecture-card">
+            <span class="card-index">02</span>
+
+            <h3>Preserve evidence</h3>
+
+            <p>
+              Business events need a durable, source-faithful landing point
+              so downstream systems can be replayed, repaired, and evolved
+              without repeatedly coupling themselves to the operational
+              database.
+            </p>
+          </article>
+
+
+          <article class="architecture-card">
+            <span class="card-index">03</span>
+
+            <h3>Establish trust</h3>
+
+            <p>
+              Arrival order is not necessarily business order. Duplicate,
+              late, malformed, and contradictory events require explicit
+              treatment before the data becomes a trusted analytical
+              representation.
+            </p>
+          </article>
+
+
+          <article class="architecture-card">
+            <span class="card-index">04</span>
+
+            <h3>Support different questions</h3>
+
+            <p>
+              Executives need stable metrics. Investigators need detailed
+              state and history. Analysts need flexible exploration.
+              Natural-language users need governed context rather than
+              unrestricted access to raw data.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         ARCHITECTURE
+         ========================================================= -->
+
+    <section class="project-section project-architecture">
+      <div class="container">
+
+        <div class="section-number">02</div>
+
+        <div class="section-heading">
+          <p class="eyebrow">ARCHITECTURE</p>
+
+          <h2>
+            A chain of responsibilities — not a chain of product logos.
+          </h2>
+
+          <p class="section-intro">
+            Each boundary exists because the information has acquired a
+            different responsibility. The implementation happens to use
+            PostgreSQL, AWS, and Databricks; the architectural decomposition
+            is more durable than those individual technology choices.
+          </p>
+        </div>
+
+
+        <div class="architecture-flow">
+
+        <div class="flow-node">
+            <span class="flow-label">OPERATE</span>
+            <strong>PostgreSQL</strong>
+            <small>System of record</small>
+        </div>
+
+        <div class="flow-arrow" aria-hidden="true">→</div>
+
+        <div class="flow-node">
+            <span class="flow-label">PRESERVE</span>
+            <strong>S3</strong>
+            <small>Source-faithful events</small>
+        </div>
+
+        <div class="flow-arrow" aria-hidden="true">→</div>
+
+        <div class="flow-node layer-bronze">
+            <span class="flow-label">INGEST</span>
+            <strong>Bronze</strong>
+            <small>Raw analytical representation</small>
+        </div>
+
+        <div class="flow-arrow" aria-hidden="true">→</div>
+
+        <div class="flow-node layer-silver">
+            <span class="flow-label">TRUST</span>
+            <strong>Silver</strong>
+            <small>Validated state + history</small>
+        </div>
+
+        <div class="flow-arrow" aria-hidden="true">→</div>
+
+        <div class="flow-node layer-gold">
+            <span class="flow-label">MODEL</span>
+            <strong>Gold</strong>
+            <small>Business consumption</small>
+        </div>
+
+        <div class="flow-arrow" aria-hidden="true">→</div>
+
+        <div class="flow-node flow-node-accent">
+            <span class="flow-label">CONSUME</span>
+            <strong>Experiences</strong>
+            <small>Dashboard · App · AI</small>
+        </div>
+
+        </div>
+
+        <div class="architecture-notes">
+            <div>
+              <div class="note-heading">
+                  <strong><span class="layer-red">S3 </span> Original Source</strong>
+              </div>
+              <p>
+                It decouples extraction from downstream processing and provides
+                replayability, source fidelity, and failure isolation.
+              </p>
+            </div>
+            <div>
+              <div class="note-heading">
+                  <strong><span class="layer-bronze">Bronze</span> Intentionally imperfect.</strong>
+              </div>    
+              <p>
+                  It records what the analytical platform successfully received
+                  rather than silently rewriting source evidence.
+              </p>
+            </div>  
+            <div>
+              <div class="note-heading">
+                  <strong><span class="layer-silver">Silver</span> Establish analytical trust.</strong>
+              </div>              
+              <p>
+                  Quality rules, deduplication, business-time sequencing, current
+                  state, and historical state belong here.
+              </p>
+            </div>
+            <div>
+              <div class="note-heading">
+                  <strong><span class="layer-gold">Gold</span> Express business purpose.</strong>
+              </div>      
+              <p>
+                  A Gold model does not have to be aggregated; its defining
+                  property is a stable business-consumption grain.
+              </p>
+            </div>
+        </div>
+        <div class="principle-callout">
+          <span class="callout-label">Durable architecture</span>
+
+          <p>
+            Operational system → durable source-faithful events → raw
+            analytical representation → trusted analytical representation →
+            business-consumption models → governed deterministic and
+            exploratory consumers.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         NEXT SECTION PLACEHOLDER
+         ========================================================= -->
+
+    <section class="project-section section-muted">
+      <div class="container">
+
+        <div class="section-number">03</div>
+
+        <div class="section-heading">
+          <p class="eyebrow">NEXT</p>
+          <h2>Why Databricks?</h2>
+
+          <p class="section-intro">
+            The platform decision did not come from a single requirement.
+            The next section examines why the cumulative workload made
+            Databricks coherent — and where simpler alternatives remain
+            entirely reasonable.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div>
+        <strong>Jay Menon</strong>
+        <p>Architecture &amp; Engineering Projects</p>
+      </div>
+
+      <a href="../../index.html#projects">Back to projects ↑</a>
+
+    </div>
+  </footer>
+
+
+  <script src="../../assets/js/site.js"></script>
+
+</body>
+</html>

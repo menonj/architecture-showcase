@@ -610,3 +610,608 @@ a {
     gap: 5px;
   }
 }
+
+/* =========================================================
+   PROJECT CASE STUDIES
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Project hero
+   --------------------------------------------------------- */
+
+.project-hero {
+  padding: 5.5rem 0 5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-back {
+  display: inline-block;
+  margin-bottom: 3.5rem;
+  text-decoration: none;
+}
+
+.project-back:hover {
+  color: var(--text);
+}
+
+.project-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.7fr);
+  gap: 5rem;
+  align-items: end;
+}
+
+.project-hero h1 {
+  margin: 0.75rem 0 0;
+  font-size: clamp(4.5rem, 10vw, 8rem);
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+}
+
+.project-subtitle {
+  margin: 1.35rem 0 0;
+  max-width: 48rem;
+  color: var(--accent);
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.project-lead {
+  margin: 2rem 0 0;
+  max-width: 50rem;
+  color: var(--text-soft);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   Project summary
+   --------------------------------------------------------- */
+
+.project-summary-card {
+  padding: 0 0 0 2rem;
+  border-left: 1px solid var(--border);
+}
+
+.summary-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.summary-item:first-child {
+  padding-top: 0;
+}
+
+.summary-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.summary-item span,
+.summary-item strong {
+  display: block;
+}
+
+.summary-item span {
+  margin-bottom: 0.35rem;
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.summary-item strong {
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+
+/* ---------------------------------------------------------
+   General project sections
+   --------------------------------------------------------- */
+
+.project-section {
+  position: relative;
+  padding: 7rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-muted {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.015),
+      rgba(255, 255, 255, 0.005)
+    );
+}
+
+.section-number {
+  margin-bottom: 2.5rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.section-heading {
+  max-width: 58rem;
+}
+
+.section-heading h2 {
+  margin: 0.65rem 0 0;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.section-intro {
+  margin: 1.75rem 0 0;
+  max-width: 50rem;
+  color: var(--text-soft);
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.prose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4rem;
+  margin-top: 2.75rem;
+}
+
+.prose-grid p {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+.prose-grid .section-intro {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.18rem;
+}
+
+
+/* ---------------------------------------------------------
+   Architecture principle callout
+   --------------------------------------------------------- */
+
+.principle-callout {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--border);
+}
+
+.callout-label {
+  padding-top: 0.25rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.principle-callout p {
+  margin: 0;
+  max-width: 52rem;
+  font-size: clamp(1rem, 1vw, 1.6rem);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+
+/* ---------------------------------------------------------
+   Problem cards
+   --------------------------------------------------------- */
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 4rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--border);
+}
+
+.architecture-card {
+  position: relative;
+  min-height: 18rem;
+  padding: 2.25rem;
+  background: var(--background);
+}
+
+.section-muted .architecture-card {
+  background: rgba(9, 20, 36, 0.96);
+}
+
+.card-index {
+  display: block;
+  margin-bottom: 3.5rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.architecture-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.025em;
+}
+
+.architecture-card p {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.75;
+}
+
+/* =========================================================
+   METROPULSE ARCHITECTURE COMPOSITION
+   ========================================================= */
+.project-architecture .section-heading {
+  display: block;
+  max-width: 1050px;
+  margin: 0 auto 3.5rem;
+}
+
+.project-architecture .section-heading .eyebrow {
+  margin: 0 0 2rem;
+}
+
+.project-architecture .section-heading h2 {
+  max-width: 950px;
+  margin: 0;
+
+  font-size: clamp(3rem, 4.5vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.project-architecture .section-heading .section-intro {
+  max-width: 720px;
+  margin: 2rem 0 0;
+
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+
+/* ---------------------------------------------------------
+   Architecture flow
+   --------------------------------------------------------- */
+
+.project-architecture .architecture-flow {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) 2rem
+    minmax(0, 1fr) 2rem
+    minmax(0, 1fr) 2rem
+    minmax(0, 1fr) 2rem
+    minmax(0, 1fr) 2rem
+    minmax(0, 1fr);
+
+  align-items: stretch;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 3.5rem auto 4.5rem;
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+}
+
+.project-architecture .flow-node {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 135px;
+  padding: 1.25rem;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.project-architecture .flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.project-architecture .flow-label {
+  margin-bottom: 1rem;
+}
+
+.project-architecture .flow-node strong {
+  font-size: 1.15rem;
+}
+
+.project-architecture .flow-node small {
+  margin-top: 0.4rem;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+.project-architecture .flow-node small {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--text-soft);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.project-architecture .flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1.6rem;
+  opacity: 1;
+}
+
+.project-architecture .flow-transition {
+  width: calc((100% - 6rem) / 3);
+  display: flex;
+  justify-content: center;
+  padding: 0.65rem 0;
+  color: var(--accent);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.project-architecture .flow-node-accent {
+  border-color: rgba(86, 168, 255, 0.65);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(86, 168, 255, 0.14),
+      rgba(86, 168, 255, 0.035)
+    );
+}
+
+
+/* ---------------------------------------------------------
+   Architecture notes
+   --------------------------------------------------------- */
+
+
+
+.architecture-notes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.architecture-notes > div {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.architecture-notes span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.architecture-notes p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.architecture-notes strong {
+  color: var(--text);
+}
+
+
+/* =========================================================
+   RESPONSIVE PROJECT LAYOUT
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .architecture-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .flow-arrow {
+    display: none;
+  }
+
+  .architecture-notes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .project-hero {
+    padding: 4rem 0;
+  }
+
+  .project-hero-grid,
+  .prose-grid,
+  .principle-callout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero-grid {
+    gap: 3rem;
+  }
+
+  .project-summary-card {
+    padding: 2rem 0 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .project-section {
+    padding: 5rem 0;
+  }
+
+  .problem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-card {
+    min-height: auto;
+  }
+
+  .architecture-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .principle-callout {
+    gap: 1rem;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .project-hero h1 {
+    font-size: clamp(3.7rem, 20vw, 5rem);
+  }
+
+  .architecture-flow,
+  .architecture-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-node {
+    min-height: 9rem;
+  }
+
+}
+/* =========================================================
+   FINAL SECTION HEADER ALIGNMENT
+   ========================================================= */
+
+/*
+   Section number + eyebrow form one compact metadata row.
+   Headline and explanation begin directly beneath it.
+*/
+
+.project-section > .container {
+  position: relative;
+}
+
+.project-section .section-heading {
+  position: relative;
+  max-width: 1050px;
+  margin: 0 auto 3.5rem;
+}
+
+/* Number joins the eyebrow rather than floating independently */
+.project-section .section-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+/* 02  ARCHITECTURE */
+.project-section .section-heading .eyebrow {
+  margin: 0 0 1.5rem;
+  padding-left: 0rem;
+
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Headline starts directly beneath metadata row */
+.project-section .section-heading h2 {
+  max-width: 950px;
+  margin: 0;
+
+  font-size: clamp(2.0rem, 3.2vw, 3.35rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+/* Explanation shares headline's left edge */
+.project-section .section-heading .section-intro {
+  max-width: 720px;
+  margin: 1.5rem 0 0;
+}
+
+
+/* =========================================================
+   ARCHITECTURE NOTE HEADINGS
+   ========================================================= */
+
+.project-architecture .architecture-notes > div {
+  display: block;
+}
+
+/* Number only */
+.project-architecture .architecture-notes .note-heading > span:first-child {
+    color: var(--accent);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+/* Heading text */
+.project-architecture .architecture-notes .note-heading strong {
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+.project-architecture .architecture-notes > div > p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Medallion layer names */
+.project-architecture .architecture-notes .layer-red {
+  color: #ff0000;
+}
+
+.project-architecture .architecture-notes .layer-bronze {
+  color: #cd7f32;
+}
+
+.project-architecture .architecture-notes .layer-silver {
+  color: #c0c7d1;
+}
+
+.project-architecture .architecture-notes .layer-gold {
+  color: #d9b44a;
+}
