@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jay Menon | Architecture & Engineering Projects</title>
+
+  <meta
+    name="description"
+    content="Selected architecture and engineering projects exploring data platforms, analytics, AI, graph systems, and software architecture."
+  >
+
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-identity" href="/">
+        <span class="identity-mark">JM</span>
+
+        <span class="identity-text">
+          <strong>Jay Menon</strong>
+          <span>Architecture & Engineering</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <p class="eyebrow">Architecture & Engineering Projects</p>
+
+        <h1>
+          Building systems to understand
+          <span class="accent-text">complex information.</span>
+        </h1>
+
+        <p class="hero-copy">
+          Selected implementations exploring modern data architecture,
+          analytical systems, conversational AI, graph technologies,
+          and the engineering decisions that connect them.
+        </p>
+
+        <a class="primary-action" href="#projects">
+          Explore projects
+          <span aria-hidden="true">↓</span>
+        </a>
+
+      </div>
+    </section>
+
+
+    <section class="projects-section" id="projects">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected Work</p>
+            <h2>Projects</h2>
+          </div>
+
+          <p class="section-intro">
+            Working reference implementations built to investigate
+            architectural choices, implementation tradeoffs, and
+            production evolution—not simply demonstrate technologies.
+          </p>
+        </div>
+
+
+        <article class="project-card">
+
+          <div class="project-number">01</div>
+
+          <div class="project-content">
+
+            <div class="project-meta">
+              <span>Data Architecture</span>
+              <span>Lakehouse</span>
+              <span>Conversational Analytics</span>
+            </div>
+
+            <h3>MetroPulse</h3>
+
+            <p class="project-subtitle">
+              Serverless Incremental Lakehouse Reference Architecture
+            </p>
+
+            <p class="project-description">
+              A working architecture that takes operational trip events
+              from PostgreSQL through durable cloud landing, governed
+              Bronze/Silver/Gold analytical layers, deterministic business
+              experiences, and natural-language analytics.
+            </p>
+
+
+            <div class="architecture-flow" aria-label="MetroPulse architecture flow">
+
+              <div class="flow-node">
+                <span class="flow-label">Operational</span>
+                <strong>PostgreSQL</strong>
+              </div>
+
+              <span class="flow-arrow">→</span>
+
+              <div class="flow-node">
+                <span class="flow-label">Landing</span>
+                <strong>Amazon S3</strong>
+              </div>
+
+              <span class="flow-arrow">→</span>
+
+              <div class="flow-node">
+                <span class="flow-label">Lakehouse</span>
+                <strong>Databricks</strong>
+              </div>
+
+              <span class="flow-arrow">→</span>
+
+              <div class="flow-node">
+                <span class="flow-label">Consumption</span>
+                <strong>Analytics + AI</strong>
+              </div>
+
+            </div>
+
+
+            <div class="project-footer">
+
+              <div class="technology-list">
+                <span>Delta Lake</span>
+                <span>Lakeflow</span>
+                <span>Unity Catalog</span>
+                <span>Genie</span>
+                <span>Streamlit</span>
+                <span>Terraform</span>
+              </div>
+
+              <a class="project-link" href="projects/metropulse/">
+                Explore MetroPulse
+                <span aria-hidden="true">→</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <div class="future-project">
+          <span class="future-number">02</span>
+
+          <div>
+            <p class="future-label">Next investigation</p>
+            <p>
+              Conversational analytics over complex graph relationships.
+            </p>
+          </div>
+
+          <span class="future-status">In development</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+
+        <div>
+          <p class="eyebrow">About this workspace</p>
+          <h2>Architecture through implementation.</h2>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            These projects start with a business problem rather than a
+            technology demonstration. Each implementation is used to test
+            architectural assumptions, expose engineering tradeoffs, and
+            understand how a design would need to evolve for production.
+          </p>
+
+          <p>
+            The goal is not to present one technology as the answer, but to
+            make the reasoning behind the architecture visible and defensible.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Jay Menon</span>
+      <span>Architecture & Engineering Projects</span>
+    </div>
+  </footer>
+
+</body>
+</html>
